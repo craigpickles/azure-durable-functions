@@ -72,7 +72,6 @@ namespace DurableFunctions.FanOutThenIn
             [OrchestrationClient]DurableOrchestrationClientBase starter,
             ILogger log)
         {
-            // Function input comes from the request content.
             string instanceId = await starter.StartNewAsync("FanOutThenInSequence", null);
 
             log.LogInformation($"Started orchestration with ID = '{instanceId}'.");

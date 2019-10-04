@@ -36,7 +36,6 @@ namespace DurableFunctions.FunctionChaining
             [OrchestrationClient]DurableOrchestrationClientBase starter,
             ILogger log)
         {
-            // Function input comes from the request content.
             string instanceId = await starter.StartNewAsync("HelloSequence", null);
 
             log.LogInformation($"Started orchestration with ID = '{instanceId}'.");
