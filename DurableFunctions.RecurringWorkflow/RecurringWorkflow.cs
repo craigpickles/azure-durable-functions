@@ -77,7 +77,6 @@ namespace DurableFunctions.Recurring
 
             log.LogInformation($"Started orchestration with ID = '{instanceId}'.");
 
-
             // wait for response
             if (wait)
                 return await starter.WaitForCompletionOrCreateCheckStatusResponseAsync(req, instanceId);

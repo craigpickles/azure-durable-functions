@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DurableFunctions.ExternalIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurableFunctions.CustomStatus", "DurableFunctions.CustomStatus\DurableFunctions.CustomStatus.csproj", "{ADD52563-9B32-41AC-8F39-D2CFCDBF5FA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurableFunctions.Retry", "DurableFunctions.Retry\DurableFunctions.Retry.csproj", "{4966EE01-02C0-4D26-84D8-37F64B37E79A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurableFunctions.EternalOrchestration", "DurableFunctions.EternalOrchestration\DurableFunctions.EternalOrchestration.csproj", "{4310EADB-3C6F-4855-BA60-830E4D83063C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{ADD52563-9B32-41AC-8F39-D2CFCDBF5FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADD52563-9B32-41AC-8F39-D2CFCDBF5FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADD52563-9B32-41AC-8F39-D2CFCDBF5FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4966EE01-02C0-4D26-84D8-37F64B37E79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4966EE01-02C0-4D26-84D8-37F64B37E79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4966EE01-02C0-4D26-84D8-37F64B37E79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4966EE01-02C0-4D26-84D8-37F64B37E79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4310EADB-3C6F-4855-BA60-830E4D83063C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4310EADB-3C6F-4855-BA60-830E4D83063C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4310EADB-3C6F-4855-BA60-830E4D83063C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4310EADB-3C6F-4855-BA60-830E4D83063C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
