@@ -15,7 +15,7 @@ namespace DurableFunctions.Recurring
     public class RecurringWorkflow
     {
         [FunctionName("RecurringWorkflow")]
-        public async Task<string> RunOrchestrator(
+        public async Task RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContextBase context)
         {
             var taskId = context.GetInput<int>();
@@ -38,8 +38,6 @@ namespace DurableFunctions.Recurring
                 // sleep until next check
                 await context.CreateTimer(nextCheck, CancellationToken.None);
             }
-
-            return "Finished...";
         }
 
         [FunctionName("RecurringWorkflow_Process")]
