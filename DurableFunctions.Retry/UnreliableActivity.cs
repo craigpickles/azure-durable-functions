@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace DurableFunctions.FunctionChaining
 {
-    public static class UnreliableActivity
+    public class UnreliableActivity
     {
         [FunctionName("UnreliableActivity")]
-        public static async Task RunOrchestrator(
+        public async Task RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContextBase context, ILogger log)
         {
             var retryOptions = new RetryOptions(firstRetryInterval: TimeSpan.FromSeconds(5), maxNumberOfAttempts: 3);
@@ -37,13 +37,13 @@ namespace DurableFunctions.FunctionChaining
         }
 
         [FunctionName("UnreliableActivity_Hello")]
-        public static string SayHello([ActivityTrigger] DurableActivityContextBase context, ILogger log)
+        public string SayHello([ActivityTrigger] DurableActivityContextBase context, ILogger log)
         {
             throw new Exception("I don't work");
         }
 
         [FunctionName("UnreliableActivity_HttpStart")]
-        public static async Task<HttpResponseMessage> HttpStart(
+        public async Task<HttpResponseMessage> HttpStart(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get")]HttpRequestMessage req,
             [OrchestrationClient]DurableOrchestrationClientBase starter,
             ILogger log)
